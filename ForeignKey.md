@@ -6,6 +6,19 @@ It creates a relationship between two tables.
 Students table: each student has a unique id (primary key).
 Scores table: each score belongs to a student → it uses the student’s id as a foreign key.
 
+SQLite supports foreign keys, but by default they are OFF.
+
+You must run this command every time you open SQLite (it lasts for the current connection/session):
+
+PRAGMA foreign_keys = ON;
+
+PRAGMA is a special SQLite command that changes settings.
+
+You can check if it’s on by running:
+-PRAGMA foreign_keys;
+-If it returns 1 → ON.
+-If it returns 0 → OFF.
+
 2. Why Use Foreign Keys?
 
 To connect related data (students ↔ scores, customers ↔ orders).
