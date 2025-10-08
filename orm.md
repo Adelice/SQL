@@ -1,0 +1,1 @@
+-save(),find(),all(),update(),delete()
